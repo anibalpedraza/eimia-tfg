@@ -1,0 +1,23 @@
+\pagestyle{plain}
+\phantomsection
+\ifspanish
+    \chapter*{Agradecimientos}
+    \addcontentsline{toc}{chapter}{Agradecimientos}
+\else
+    \chapter*{Acknowledgements}
+    \addcontentsline{toc}{chapter}{Acknowledgements}
+\fi
+
+Sustituye este texto por un agradecimiento breve a las personas, instituciones,
+empresas o grupos de investigación que hayan colaborado en el desarrollo del
+TFG.
+
+\makeatletter
+\begin{flushright}
+    \vspace{1.5cm}
+    \textit{\@autor}\\
+    \@cityTF, \@yearTF
+\end{flushright}
+\makeatother
+
+\cleardoublepage

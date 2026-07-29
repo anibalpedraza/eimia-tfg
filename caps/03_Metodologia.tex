@@ -1,0 +1,157 @@
+\chapter{Metodología y desarrollo}
+\label{cap:metodologia}
+
+Este capítulo describe cómo se ha realizado el trabajo. Debe permitir que otra
+persona entienda el procedimiento seguido, los criterios de diseño, las
+herramientas empleadas y las decisiones técnicas más importantes.
+
+\section{Metodología empleada}
+\label{sec:metodologia-empleada}
+
+Explica el enfoque general del TFG: experimental, analítico, de diseño,
+documental, computacional, de simulación, de implantación, comparativo o una
+combinación de varios. La metodología debe estar conectada con los objetivos de
+la Sección~\ref{sec:objetivos}.
+
+Un esquema habitual para trabajos de ingeniería es el siguiente:
+
+\begin{enumerate}
+    \item Revisión bibliográfica, normativa y técnica.
+    \item Definición de requisitos y alcance.
+    \item Diseño de la solución o planteamiento del estudio.
+    \item Desarrollo, cálculo, simulación, montaje o implementación.
+    \item Pruebas, validación y análisis de resultados.
+    \item Redacción de conclusiones y trabajo futuro.
+\end{enumerate}
+
+\subsection{Fases del estudio}
+\label{subsec:fases-estudio}
+
+La Tabla~\ref{tab:plan-trabajo} muestra un ejemplo de cómo presentar una
+planificación por fases. Sustituye los textos de ejemplo por las fases reales
+del proyecto.
+
+\begin{table}[!ht]
+    \footnotesize
+    \centering
+    \caption[Ejemplo de planificación del TFG por fases]{Ejemplo de planificación del TFG por fases. Fuente: elaboración propia}
+    \label{tab:plan-trabajo}
+    \begin{tabularx}{\textwidth}{p{3.4cm}X}
+        \toprule
+        \textbf{Fase} & \textbf{Descripción} \\
+        \midrule
+        Análisis inicial & Identificación del problema, revisión de documentación y delimitación del alcance. \\
+        Diseño & Definición de requisitos, alternativas de solución y criterios de evaluación. \\
+        Desarrollo & Implementación, cálculos, simulaciones, montaje o elaboración de la propuesta técnica. \\
+        Validación & Pruebas, comparación de resultados, análisis de errores y discusión de limitaciones. \\
+        Redacción & Integración de resultados, conclusiones, anexos y revisión formal de la memoria. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{Herramientas y materiales}
+\label{subsec:herramientas-materiales}
+
+Describe los recursos empleados: software, equipos de laboratorio, sensores,
+instrumentación, bases de datos, lenguajes de programación, paquetes de cálculo,
+normativa o documentación técnica. Indica versiones cuando sean relevantes para
+la reproducibilidad.
+
+La estructura recomendada para este apartado es:
+
+\begin{itemize}
+    \item Herramientas de diseño, cálculo o simulación.
+    \item Materiales, equipos o componentes utilizados.
+    \item Datos de partida y criterios de selección.
+    \item Configuración del entorno de pruebas o desarrollo.
+\end{itemize}
+
+\section{Desarrollo de la propuesta}
+\label{sec:desarrollo-propuesta}
+
+En esta sección se explica el trabajo realizado paso a paso. Debe contener la
+parte técnica central de la memoria: cálculos, diseños, diagramas, modelos,
+procedimientos, implementación o montaje.
+
+Si se incluyen ecuaciones, deben estar numeradas sólo cuando se vayan a
+referenciar. Por ejemplo, la Ecuación~\ref{eq:variacion-relativa} muestra una
+forma sencilla de calcular una variación relativa porcentual:
+
+\begin{equation}
+    \Delta_{\%} =
+    \frac{V_{\mathrm{final}} - V_{\mathrm{inicial}}}{V_{\mathrm{inicial}}}
+    \cdot 100
+    \label{eq:variacion-relativa}
+\end{equation}
+
+Define cada variable antes o después de la ecuación y especifica sus unidades.
+No dejes fórmulas aisladas sin interpretación técnica.
+
+\subsection{Ejemplo de listado de código}
+\label{subsec:ejemplo-listado}
+
+Cuando el TFG incluya programación, configuración o pseudocódigo, puedes usar
+el entorno \texttt{lstlisting}. El Listado~\ref{lst:ejemplo-validacion} muestra
+un ejemplo mínimo.
+
+\begin{lstlisting}[language=Python,caption={Ejemplo de validación de resultados},label={lst:ejemplo-validacion}]
+def error_relativo(valor_medido, valor_referencia):
+    """Calcula el error relativo porcentual."""
+    return abs(valor_medido - valor_referencia) / valor_referencia * 100
+
+resultado = error_relativo(9.8, 10.0)
+print(f"Error relativo: {resultado:.2f} %")
+\end{lstlisting}
+
+No incluyas grandes bloques de código si no son necesarios para entender el
+trabajo. Cuando el código sea extenso, es preferible explicar los fragmentos
+relevantes y llevar el resto a un anexo o a un repositorio asociado.
+
+\subsection{Ejemplo de algoritmo}
+\label{subsec:ejemplo-algoritmo}
+
+Los algoritmos ayudan a describir procedimientos de decisión, búsqueda,
+optimización o validación sin depender de un lenguaje de programación concreto.
+
+\begin{algorithm}[H]
+    \DontPrintSemicolon
+    \KwData{Requisitos del problema y alternativas disponibles}
+    \KwResult{Alternativa seleccionada}
+    Definir criterios de evaluación\;
+    Asignar una ponderación a cada criterio\;
+    \ForEach{alternativa}{
+        Calcular la puntuación ponderada\;
+    }
+    Seleccionar la alternativa con mayor puntuación justificada\;
+    \caption{Ejemplo de procedimiento de selección}
+    \label{alg:seleccion-alternativa}
+\end{algorithm}
+
+\section{Consideraciones éticas, de seguridad y sostenibilidad}
+\label{sec:consideraciones}
+
+Incluye aquí cualquier consideración relevante sobre seguridad, protección de
+datos, riesgos laborales, impacto ambiental, accesibilidad, sostenibilidad,
+mantenimiento o uso responsable de los recursos.
+
+Aunque el TFG sea principalmente técnico, es recomendable explicar las
+restricciones no puramente técnicas que afectan a la solución. Este apartado
+puede ser breve, pero debe demostrar que se han tenido en cuenta los efectos del
+trabajo más allá del cálculo o del prototipo.
+
+\section{Limitaciones metodológicas}
+\label{sec:limitaciones-metodologicas}
+
+Todo TFG tiene límites: tiempo, presupuesto, disponibilidad de equipos,
+incertidumbre de datos, tamaño de muestra, alcance de las pruebas o supuestos de
+cálculo. Explicarlos no debilita el trabajo; al contrario, ayuda a interpretar
+correctamente los resultados.
+
+Algunos ejemplos de limitaciones que puedes adaptar son:
+
+\begin{enumerate}
+    \item Disponibilidad limitada de datos experimentales o de documentación técnica.
+    \item Restricciones de tiempo para realizar pruebas de larga duración.
+    \item Uso de un entorno de laboratorio que no reproduce todas las condiciones reales.
+    \item Dependencia de versiones concretas de software, equipos o librerías.
+\end{enumerate}

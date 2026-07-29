@@ -1,0 +1,36 @@
+\ifspanish
+    \selectlanguage{spanish}
+\else
+    \selectlanguage{english}
+\fi
+\setindexnames
+\pagestyle{fancy}
+
+\cleardoublepage
+\phantomsection
+\pdfbookmark[0]{\contentsname}{idx_toc}
+\tableofcontents
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+% Descomenta este bloque si quieres incluir un índice de listados de código.
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{\lstlistlistingname}
+% \lstlistoflistings
+
+% Descomenta este bloque si quieres incluir un índice de algoritmos.
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{\listalgorithmcfname}
+% \listofalgorithms
+
+\cleardoublepage

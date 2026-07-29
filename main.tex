@@ -1,0 +1,58 @@
+%!TEX root = main.tex
+% Compilación: usa latexmk desde la terminal o selecciona main.tex como
+% documento principal en Overleaf, Texmaker, TeXstudio o LaTeX Workshop.
+\newif\ifspanish
+\spanishtrue
+% Para redactar el cuerpo principal en inglés, sustituye la línea anterior por:
+% \spanishfalse
+
+\input{packagesTFG}
+
+% Añade aquí únicamente los paquetes adicionales que necesite tu TFG.
+
+% DATOS DEL TFG: este es el único bloque obligatorio que debes completar.
+\titulo{TÍTULO DEL TRABAJO FIN DE GRADO}
+\tituloIngles{FINAL DEGREE PROJECT TITLE}
+\autor{NOMBRE Y APELLIDOS DEL AUTOR O AUTORA}
+\titulacion{GRADO EN INGENIERÍA MINERA Y ENERGÉTICA} % Sustituye por tu grado.
+\director{NOMBRE Y APELLIDOS DEL DIRECTOR O DIRECTORA}
+\codirector{NOMBRE Y APELLIDOS DEL CODIRECTOR O CODIRECTORA} % Déjalo vacío si el TFG no tiene codirección.
+\fechaEntrega{9}{2026} % Mes (1-12) y año de entrega.
+
+\begin{document}
+
+\frontmatter
+\pagestyle{empty}
+\input{./preambulo/PortadaEIMIA}
+\input{./preambulo/Creditos}
+\input{./preambulo/Dedicatoria} % Comenta esta línea si no quieres dedicatoria.
+\input{./preambulo/Indices}
+\input{./preambulo/Agradecimientos} % Comenta esta línea si no quieres agradecimientos.
+\input{./preambulo/Resumen}
+
+\mainmatter
+\pagestyle{fancy}
+\onehalfspacing
+\ifspanish
+    \selectlanguage{spanish}
+\else
+    \selectlanguage{english}
+\fi
+\setindexnames
+
+% Añade, elimina o reordena aquí los capítulos de la memoria.
+\include{./caps/01_Introduccion}
+\include{./caps/02_MarcoTeorico}
+\include{./caps/03_Metodologia}
+\include{./caps/04_Resultados}
+\include{./caps/05_Conclusiones}
+
+\cleardoublepage
+\bibliographystyle{apacite}
+\bibliography{bibliography}
+
+% Comenta este bloque completo si tu TFG no necesita anexos.
+\appendix
+\include{./caps/06_Anexo_I}
+
+\end{document}

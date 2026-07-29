@@ -1,0 +1,77 @@
+\pagestyle{plain}
+
+% Sustituye el resumen y las palabras clave por los de tu TFG (250-350 palabras y 3-5 palabras clave).
+\phantomsection
+\addcontentsline{toc}{chapter}{Resumen}
+\selectlanguage{spanish}
+\makeatletter
+\begin{center}
+    {\textsc{TFG - EIMIA (UCLM)}\par}
+    \vspace{1cm}
+    {\textbf{\Large\@titulo}\par}
+    \vspace{0.4cm}
+    {\@autor \\ \@cityTF, \@mesTF{} de \@yearTF\par}
+    \vspace{0.9cm}
+    {\textbf{\large\textsf{Resumen}}\par}
+\end{center}
+\makeatother
+
+Este documento proporciona una plantilla genérica para la redacción de Trabajos
+Fin de Grado de la Escuela de Ingeniería Minera e Industrial de Almadén
+(EIMIA). Su finalidad es servir como punto de partida para mantener una
+estructura homogénea, una portada adaptada al centro y una organización clara de
+capítulos, anexos, figuras, tablas y bibliografía.
+
+Sustituye este texto por un resumen de entre 250 y 350 palabras cuando el
+trabajo esté avanzado. El resumen debe describir el problema abordado, el método
+seguido, los resultados principales y las conclusiones más relevantes. No es
+una introducción extensa ni debe contener información que no aparezca
+desarrollada en la memoria.
+
+\textbf{Palabras clave:}
+palabra clave 1,
+palabra clave 2,
+palabra clave 3,
+palabra clave 4.
+
+\cleardoublepage
+
+% Sustituye este texto por la versión inglesa del resumen y de las palabras clave.
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\selectlanguage{english}
+\makeatletter
+\begin{center}
+    {\textsc{TFG - EIMIA (UCLM)}\par}
+    \vspace{1cm}
+    {\textbf{\Large\@tituloIngles}\par}
+    \vspace{0.4cm}
+    {\@autor \\ \@cityTF, \@monthTF{} \@yearTF\par}
+    \vspace{0.9cm}
+    {\textbf{\large\textsf{Abstract}}\par}
+\end{center}
+\makeatother
+
+This document provides a generic template for Final Degree Project reports at
+the School of Mining and Industrial Engineering of Almadén (EIMIA). It is meant
+to help students start from a consistent structure with front matter, chapters,
+appendices, figures, tables and bibliography already configured.
+
+Replace this text with the English version of the Spanish abstract, keeping it
+between 250 and 350 words. The abstract should briefly state the problem, the
+methodology, the main results and the most important conclusions of the project.
+
+\textbf{Keywords:}
+keyword 1,
+keyword 2,
+keyword 3,
+keyword 4.
+
+\cleardoublepage
+
+\ifspanish
+    \selectlanguage{spanish}
+\else
+    \selectlanguage{english}
+\fi
+\setindexnames

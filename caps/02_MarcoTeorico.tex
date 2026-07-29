@@ -1,0 +1,79 @@
+\chapter{Marco teórico}
+\label{cap:marco-teorico}
+
+El marco teórico reúne el conocimiento previo necesario para entender el TFG.
+No debe ser una colección de resúmenes independientes, sino una explicación
+ordenada de conceptos, normativa, tecnologías y trabajos relacionados que
+conduzca de forma natural al problema planteado.
+
+\section{Marco legal, normativo o técnico}
+\label{sec:marco-normativo}
+
+Incluye en esta sección las normas, reglamentos, estándares, instrucciones
+técnicas o criterios institucionales que condicionen el trabajo. En proyectos de
+ingeniería puede ser necesario citar normativa de seguridad, reglamentos
+industriales, estándares de diseño, documentación de fabricantes o guías
+metodológicas.
+
+Cuando una norma sea central para el trabajo, no basta con nombrarla: explica
+qué requisito afecta a tu diseño, cálculo, instalación, simulación o evaluación.
+Si el TFG no depende de normativa específica, utiliza este apartado para
+delimitar los criterios técnicos que se tomarán como referencia.
+
+\section{Estado de la cuestión}
+\label{sec:estado-cuestion}
+
+El estado de la cuestión resume las aportaciones previas más relevantes. Debe
+permitir entender qué se ha hecho antes, qué limitaciones permanecen abiertas y
+qué hueco ocupa tu TFG.
+
+Las referencias bibliográficas se citan con el comando
+\texttt{\textbackslash cite\{clave\}}. Por ejemplo, esta plantilla incluye
+referencias clásicas sobre \LaTeX{} y composición de documentos
+técnicos~\cite{lamport1994latex,mittelbach2004latex}. Sustituye estas entradas por
+artículos, libros, normas, manuales o documentación técnica realmente empleados
+en tu trabajo.
+
+Evita basar el estado de la cuestión en fuentes poco fiables o sin trazabilidad.
+En una memoria académica es preferible utilizar artículos científicos, libros,
+normativa oficial, documentación técnica de fabricantes o informes
+institucionales.
+
+
+\section{Citas y referencias bibliográficas}
+\label{sec:citas-referencias}
+
+Toda afirmación que proceda de una fuente externa debe ir acompañada de una
+cita. Esto incluye datos, definiciones, resultados de otros autores, imágenes,
+tablas, normativa y criterios técnicos que no sean de elaboración propia.
+
+La bibliografía se gestiona en el archivo \texttt{bibliography.bib}. Cada
+entrada tiene una clave, como \texttt{knuth1984texbook}, que se usa dentro de
+la memoria. Sólo aparecerán en la bibliografía final las referencias citadas en
+el texto.
+
+Si tu TFG utiliza siglas, preséntalas la primera vez que aparezcan. Por ejemplo:
+Trabajo Fin de Grado (TFG). A partir de ese punto puede utilizarse la sigla.
+
+\section{Figuras, tablas y referencias cruzadas}
+\label{sec:referencias-cruzadas}
+
+Las figuras, tablas, ecuaciones, capítulos y secciones deben referenciarse con
+\texttt{\textbackslash label} y \texttt{\textbackslash ref}. Este sistema evita
+errores de numeración cuando se añaden o eliminan elementos.
+
+Ejemplos de prefijos recomendados para las etiquetas:
+
+\begin{itemize}
+    \item \texttt{cap:} para capítulos.
+    \item \texttt{sec:} para secciones y subsecciones.
+    \item \texttt{fig:} para figuras.
+    \item \texttt{tab:} para tablas.
+    \item \texttt{eq:} para ecuaciones.
+    \item \texttt{lst:} para listados de código.
+    \item \texttt{alg:} para algoritmos.
+\end{itemize}
+
+Antes de entregar, revisa que no queden referencias sin resolver. Si aparecen
+signos de interrogación en el PDF, normalmente es necesario compilar varias
+veces o corregir alguna etiqueta.

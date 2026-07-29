@@ -1,0 +1,83 @@
+\chapter{Guía rápida para editar la plantilla}
+\label{cap:anexo-guia}
+
+Este anexo resume los cambios habituales al comenzar un TFG con la plantilla.
+
+\section{Datos del documento}
+\label{sec:datos-documento}
+
+Los datos de portada y los metadatos del PDF se completan al principio de
+\texttt{main.tex}:
+
+\begin{itemize}
+    \item \texttt{\textbackslash titulo\{Título en español\}}: título del TFG en español.
+    \item \texttt{\textbackslash tituloIngles\{Title in English\}}: título en inglés.
+    \item \texttt{\textbackslash autor\{Nombre y apellidos\}}: nombre y apellidos.
+    \item \texttt{\textbackslash titulacion\{Grado cursado\}}: grado cursado.
+    \item \texttt{\textbackslash director\{Nombre y apellidos\}}: director o directora.
+    \item \texttt{\textbackslash codirector\{Nombre y apellidos\}}: codirección; se deja vacío si no existe.
+    \item \texttt{\textbackslash fechaEntrega\{9\}\{2026\}}: mes numérico y año de entrega.
+\end{itemize}
+
+La universidad, el centro, el tipo de documento y la ciudad ya están
+configurados para la EIMIA. El título completo se reutiliza en la portada, el
+resumen y los metadatos.
+
+\section{Organización de archivos}
+\label{sec:organizacion-archivos}
+
+\begin{description}
+    \item[\texttt{main.tex}] Datos del TFG y orden de las partes del documento.
+    \item[\texttt{packagesTFG.tex}] Formato y comandos internos de la plantilla.
+    \item[\texttt{preambulo/}] Portada, créditos, dedicatoria, índices, agradecimientos, resumen y abstract.
+    \item[\texttt{caps/}] Un archivo por capítulo o anexo.
+    \item[\texttt{figs/}] Imágenes y logotipos.
+    \item[\texttt{bibliography.bib}] Referencias bibliográficas en formato BibTeX.
+\end{description}
+
+Para añadir un capítulo, crea su archivo en \texttt{caps/} y añade el
+\texttt{\textbackslash include} correspondiente en \texttt{main.tex}.
+La dedicatoria, los agradecimientos y el bloque de anexos pueden desactivarse
+comentando las líneas señaladas en ese archivo.
+
+\section{Compilación}
+\label{sec:compilacion}
+
+La plantilla utiliza pdfLaTeX y BibTeX. Puedes compilarla desde la terminal,
+en Overleaf o con un editor local.
+
+\begin{lstlisting}[language=bash,caption={Compilación automática},label={lst:compilacion}]
+latexmk -pdf -interaction=nonstopmode main.tex
+\end{lstlisting}
+
+Este comando es la opción recomendada en la terminal porque ejecuta las pasadas
+necesarias. Si no dispones de \texttt{latexmk}, usa \texttt{pdflatex},
+\texttt{bibtex} y dos pasadas adicionales de \texttt{pdflatex}.
+
+\begin{description}
+    \item[Overleaf.] Sube el proyecto, selecciona \texttt{main.tex} como
+    documento principal y usa pdfLaTeX. No requiere una instalación local.
+    \item[Texmaker o TeXstudio.] Abre \texttt{main.tex}, establécelo como
+    documento maestro y configura la compilación rápida con \texttt{latexmk}
+    o con la secuencia manual anterior.
+    \item[Visual Studio Code.] Abre la carpeta del proyecto y utiliza una
+    receta de LaTeX Workshop basada en \texttt{latexmk}.
+\end{description}
+
+Si aparecen referencias \texttt{??}, vuelve a compilar. Si persiste un error,
+consulta el primer mensaje relevante de \texttt{main.log}.
+
+\section{Lista de comprobación antes de entregar}
+\label{sec:checklist-entrega}
+
+\begin{itemize}
+    \item No quedan textos de ejemplo ni datos provisionales.
+    \item La portada contiene título español e inglés, autoría, titulación, dirección y fecha correctos.
+    \item El resumen y el abstract tienen entre 250 y 350 palabras y entre 3 y 5 palabras clave.
+    \item Todas las figuras y tablas están citadas y señalan su fuente cuando procede.
+    \item Todas las referencias citadas aparecen en la bibliografía y siguen el estilo requerido.
+    \item No quedan referencias cruzadas sin resolver.
+    \item Las páginas del cuerpo y de las referencias están numeradas en el pie.
+    \item Se han revisado ortografía, estilo, pies de figura y formato de tablas.
+    \item Se han preparado por separado los documentos adicionales exigidos por la convocatoria.
+\end{itemize}
