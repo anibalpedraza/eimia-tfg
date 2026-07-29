@@ -1,13 +1,20 @@
 # Plantilla de TFG de la EIMIA-UCLM
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21683817.svg)](https://doi.org/10.5281/zenodo.21683817)
+
+> Esta plantilla sigue la
+> [normativa de elaboración y defensa del TFG de la EIMIA](https://www.uclm.es/es/ciudad-real/Eimia/Docencia/TFG),
+> aprobada el 4 de marzo de 2026 para su aplicación a partir del curso 2026/2027.
+
 Plantilla en LaTeX para preparar el Trabajo Fin de Grado de la
 [Escuela de Ingeniería Minera e Industrial de Almadén](https://www.uclm.es/es/ciudad-real/Eimia)
 (EIMIA), Universidad de Castilla-La Mancha.
 
-Puede utilizarse localmente con una distribución como
-[TeX Live](https://www.tug.org/texlive/) o [MiKTeX](https://miktex.org/), y
-también en línea mediante [Overleaf](https://www.overleaf.com/). `main.tex`
-funciona como ejemplo mínimo y guía de uso.
+La forma más sencilla de utilizarla es crear una copia de la plantilla publicada
+en [Overleaf](https://www.overleaf.com/latex/templates/NOMBRE/IDENTIFICADOR). También puede compilarse localmente con
+una distribución como [TeX Live](https://www.tug.org/texlive/) o
+[MiKTeX](https://miktex.org/). `main.tex` contiene una guía de uso de LaTeX y de
+la propia plantilla.
 
 ## Inicio rápido
 
@@ -25,7 +32,7 @@ Completa este único bloque al principio de `main.tex`:
 
 El título se reutiliza automáticamente en portada, resumen y metadatos. La
 universidad, el centro, la ciudad y el tipo de documento ya están configurados
-para la EIMIA. El nombre del mes se genera en español e inglés.
+para la EIMIA. El nombre del mes se genera en español e inglés a partir del número introducido.
 
 Después:
 
@@ -53,13 +60,23 @@ formato interno de la plantilla.
 
 ## Compilación
 
-La plantilla está preparada para compilarse con pdfLaTeX y BibTeX. Puedes
-elegir cualquiera de estas opciones.
+La plantilla está preparada para compilarse con pdfLaTeX y BibTeX. La opción más
+directa es utilizarla en Overleaf, aunque también puede compilarse localmente.
 
-### Desde la terminal
+### Usar la plantilla publicada en Overleaf (recomendado)
 
-La forma recomendada es dejar que `latexmk` ejecute automáticamente las
-pasadas necesarias:
+[**Abrir la plantilla de TFG de la EIMIA en Overleaf**](https://www.overleaf.com/latex/templates/NOMBRE/IDENTIFICADOR)
+*(enlace pendiente de publicación)*
+
+Abre el enlace y crea una copia del proyecto en tu cuenta. La plantilla ya está
+configurada para utilizar `main.tex` como documento principal y pdfLaTeX como
+compilador, por lo que no necesitas subir archivos ni instalar LaTeX en tu
+equipo.
+
+### Compilar localmente desde la terminal
+
+La forma recomendada de compilar en local es dejar que `latexmk` ejecute
+automáticamente las pasadas necesarias:
 
 ```powershell
 latexmk -pdf -interaction=nonstopmode main.tex
@@ -73,13 +90,6 @@ bibtex main
 pdflatex main.tex
 pdflatex main.tex
 ```
-
-### En Overleaf
-
-Sube todos los archivos y carpetas del proyecto a
-[Overleaf](https://www.overleaf.com/), selecciona `main.tex` como documento
-principal y usa pdfLaTeX como compilador. No necesitas instalar LaTeX en tu
-equipo.
 
 ### Con Texmaker u otro editor local
 
@@ -100,15 +110,15 @@ La plantilla se distribuye bajo
 La licencia no se extiende automáticamente al contenido académico añadido por
 cada estudiante ni a marcas, logotipos o materiales de terceros.
 
-Referencia de esta adaptación —URL y DOI pendientes hasta su publicación—:
+Referencia recomendada de esta adaptación:
 
 ```bibtex
 @misc{pedraza2026plantillaEIMIA,
   author = {Pedraza Dorado, Aníbal},
   title  = {Plantilla de TFG de la EIMIA-UCLM},
   year   = {2026},
-  url    = {https://github.com/ORGANIZACION/REPOSITORIO},
-  doi    = {10.XXXX/XXXX}
+  url    = {https://github.com/anibalpedraza/eimia-tfg},
+  doi    = {10.5281/zenodo.21683817}
 }
 ```
 
@@ -123,9 +133,3 @@ Plantilla original:
   doi    = {10.5281/zenodo.4561708}
 }
 ```
-
-Enlaces pendientes de completar cuando se publique esta adaptación:
-
-- Repositorio: `https://github.com/ORGANIZACION/REPOSITORIO`
-- Overleaf: `https://www.overleaf.com/latex/templates/NOMBRE/IDENTIFICADOR`
-- DOI: `https://doi.org/10.XXXX/XXXX`

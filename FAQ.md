@@ -15,13 +15,6 @@ En el bloque `DATOS DEL TFG` de `main.tex`. Solo contiene:
 `\titulo`, `\tituloIngles`, `\autor`, `\titulacion`, `\director`,
 `\codirector` y `\fechaEntrega`.
 
-## ¿Por qué ya no existen `\tituloPrimera`, `\tituloSegunda` y `\tituloCorto`?
-
-Eran variantes del mismo dato: dos líneas manuales de portada y un título
-abreviado para usos internos. Ahora `\titulo{...}` se ajusta automáticamente al
-ancho disponible y se reutiliza en portada, resumen y metadatos, evitando
-inconsistencias.
-
 ## ¿Cómo indico que no hay codirección?
 
 Deja el campo vacío:
@@ -40,7 +33,7 @@ Usa el número de mes y el año:
 \fechaEntrega{9}{2026}
 ```
 
-La plantilla mostrará `septiembre` en español y `September` en inglés.
+En este caso, por ejemplo, la plantilla mostrará `septiembre` en español y `September` en inglés.
 
 ## ¿Cómo cambio el idioma principal?
 
@@ -65,8 +58,8 @@ Los capítulos situados después de `\appendix` se numeran con letras.
 
 ## ¿Cómo compilo la memoria?
 
-La plantilla utiliza pdfLaTeX y BibTeX. Si trabajas localmente, instala primero
-una distribución como [TeX Live](https://www.tug.org/texlive/) o
+Aunque la forma de uso más sencilla es [**Abrir la plantilla de TFG de la EIMIA en Overleaf**](https://www.overleaf.com/latex/templates/NOMBRE/IDENTIFICADOR)
+*(enlace pendiente de publicación)*, también puedes crear una copia de este repositorio y compilarlo con una distribución como [TeX Live](https://www.tug.org/texlive/) o
 [MiKTeX](https://miktex.org/).
 
 Desde la terminal, la forma recomendada es:
@@ -84,19 +77,12 @@ pdflatex main.tex
 pdflatex main.tex
 ```
 
-También puedes compilar sin utilizar la terminal:
-
-- En Overleaf, sube el proyecto, elige `main.tex` como documento principal y
-  selecciona pdfLaTeX.
-- En Texmaker o TeXstudio, abre `main.tex`, establécelo como documento maestro
-  y configura la compilación rápida con `latexmk` o con la secuencia anterior.
-- En Visual Studio Code, abre la carpeta del proyecto y utiliza una receta de
-  LaTeX Workshop basada en `latexmk`.
+También puedes compilar sin utilizar la terminal, en [Texmaker](https://www.xm1math.net/texmaker/), [TeXstudio](https://www.texstudio.org/) o [Visual Studio Code con LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
 
 ## ¿Por qué aparecen signos `??`?
 
-Suele faltar alguna pasada de compilación o hay una clave mal escrita. Comprueba
-que `\label{...}`, `\ref{...}` y las claves de `\cite{...}` coincidan, y vuelve
+Suele faltar alguna pasada de compilación o hay una clave/referencia mal escrita. Comprueba
+que los `\label{...}` y sus `\ref{...}` coincidan, así como los `\cite{...}` con su entrada en el fichero `.bib`, y vuelve
 a compilar.
 
 ## ¿Cómo añado figuras y tablas?
@@ -116,7 +102,7 @@ Usa el argumento opcional de capítulos o pies:
 ## ¿Cómo se gestionan las referencias?
 
 Añade las entradas a `bibliography.bib` y cítalas con `\cite{clave}`. La
-plantilla utiliza `apacite` para generar las referencias bibliográficas.
+plantilla utiliza `apacite` para generar las referencias bibliográficas con el formato correcto automáticamente.
 
 ## ¿Qué reviso antes del depósito?
 
