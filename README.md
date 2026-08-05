@@ -11,7 +11,7 @@ Plantilla en LaTeX para preparar el Trabajo Fin de Grado de la
 (EIMIA), Universidad de Castilla-La Mancha.
 
 La forma más sencilla de utilizarla es crear una copia de la plantilla publicada
-en [Overleaf](https://www.overleaf.com/latex/templates/NOMBRE/IDENTIFICADOR). También puede compilarse localmente con
+en [Overleaf](https://www.overleaf.com/latex/templates/plantilla-tfg-eimia-uclm/dbsmjdfbdjkg). También puede compilarse localmente con
 una distribución como [TeX Live](https://www.tug.org/texlive/) o
 [MiKTeX](https://miktex.org/). `main.tex` contiene una guía de uso de LaTeX y de
 la propia plantilla.
@@ -65,8 +65,7 @@ directa es utilizarla en Overleaf, aunque también puede compilarse localmente.
 
 ### Usar la plantilla publicada en Overleaf (recomendado)
 
-[**Abrir la plantilla de TFG de la EIMIA en Overleaf**](https://www.overleaf.com/latex/templates/NOMBRE/IDENTIFICADOR)
-*(enlace pendiente de publicación)*
+[**Abrir la plantilla de TFG de la EIMIA en Overleaf**](https://www.overleaf.com/latex/templates/plantilla-tfg-eimia-uclm/dbsmjdfbdjkg)
 
 Abre el enlace y crea una copia del proyecto en tu cuenta. La plantilla ya está
 configurada para utilizar `main.tex` como documento principal y pdfLaTeX como

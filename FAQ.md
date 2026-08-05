@@ -58,8 +58,7 @@ Los capítulos situados después de `\appendix` se numeran con letras.
 
 ## ¿Cómo compilo la memoria?
 
-Aunque la forma de uso más sencilla es [**Abrir la plantilla de TFG de la EIMIA en Overleaf**](https://www.overleaf.com/latex/templates/NOMBRE/IDENTIFICADOR)
-*(enlace pendiente de publicación)*, también puedes crear una copia de este repositorio y compilarlo con una distribución como [TeX Live](https://www.tug.org/texlive/) o
+Aunque la forma de uso más sencilla es [**Abrir la plantilla de TFG de la EIMIA en Overleaf**](https://www.overleaf.com/latex/templates/plantilla-tfg-eimia-uclm/dbsmjdfbdjkg), también puedes crear una copia de este repositorio y compilarlo con una distribución como [TeX Live](https://www.tug.org/texlive/) o
 [MiKTeX](https://miktex.org/).
 
 Desde la terminal, la forma recomendada es:
